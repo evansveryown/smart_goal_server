@@ -6,7 +6,7 @@ const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
 server.use(jsonServer.bodyParser);
-server.use("/goals", router);
+server.use(router);
 
 const PORT = process.env.PORT || 3001;
 server.listen(PORT, () => {
